@@ -43,7 +43,7 @@ class GF256Test extends FunSuite with ShouldMatchers with GeneratorDrivenPropert
   
   test("addition is equivalent to subtraction") {
     forAllAB { (a: Int, b: Int) =>
-      a |+| b should be (a |-|b)
+      a |+| b should be (a |-| b)
     }
   }
   

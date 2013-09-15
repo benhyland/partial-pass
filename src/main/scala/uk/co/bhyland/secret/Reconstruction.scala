@@ -34,7 +34,7 @@ object Reconstruction {
   private def L(i: Int, U: Array[Int]) = {
     val M = U.length
     
-	require(i >= 0)
+    require(i >= 0)
     require(i < M)
     
     gf_product(
