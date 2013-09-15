@@ -71,6 +71,6 @@ class PartialPass(
   // note GF256.|+| is its own inverse
   private def characteriseShares(shares: List[Array[Int]], characters: Array[Int]) =
     shares.zip(characters).map { case (share, c) =>
-      share.map(_ |+| c)
+      Array(share(0), share.drop(1).map(_ |+| c):_*)
     }
 }
